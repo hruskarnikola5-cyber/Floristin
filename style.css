@@ -1,0 +1,92 @@
+:root {
+    --mocha: #3A231D;
+    --mint: #9ADBC0;
+    --mint-light: #D9F2E6;
+    --cream: #FDFDFD;
+    --rose: #E8D8C6;
+    --text-dark: #241512;
+    --transition-speed: 0.4s;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--cream);
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--mocha);
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.hero-section {
+    position: relative;
+    height: 85vh;
+    background: url('img/hero-ape-flowers.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(58, 35, 29, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.btn {
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-speed);
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--mint);
+    color: var(--mocha);
+}
+
+.btn-primary:hover {
+    background-color: var(--mocha);
+    color: var(--mint);
+}
+
+/* Bento Grid System für 2025er Ästhetik */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.bento-item {
+    background: var(--mint-light);
+    padding: 3rem;
+    border-radius: 20px;
+    grid-column: span 6;
+}
+
+.main-feature {
+    grid-column: span 8;
+}
+
+.secondary {
+    grid-column: span 4;
+}
