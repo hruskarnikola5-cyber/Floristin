@@ -3,147 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Die Floristin | Exklusives Blumenhandwerk Wolfsburg</title>
+    <title>Die Floristin | Blumenhandwerk mit Herz</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div id="nav-overlay" class="overlay">
-        <button class="closebtn" onclick="closeNav()">&times;</button>
-        <div class="overlay-content">
-            <a href="index.html" class="nav-item active">Home</a>
-            <a href="angebote.html" class="nav-item">Angebote</a>
-            <a href="events.html" class="nav-item">Events</a>
-            <a href="ueber-uns.html" class="nav-item">Über uns</a>
-            <a href="kontakt.html" class="nav-item">Kontakt</a>
-            <a href="anfrage.html" class="nav-item cta-menu">Anfrage stellen</a>
+<header>
+    <a href="index.html" class="logo">DIE FLORISTIN</a>
+    <button class="menu-trigger" onclick="toggleMenu()">
+        <div class="hamburger"></div>
+    </button>
+</header>
+
+<nav id="menu-overlay">
+    <a href="index.html">Home</a>
+    <a href="angebote.html">Angebote</a>
+    <a href="ueber-uns.html">Über Uns</a>
+    <a href="events.html">Events</a>
+    <a href="anfrage.html">Anfrage</a>
+    <a href="kontakt.html">Kontakt</a>
+</nav>
+
+<main class="bento-container">
+    <!-- Hero Block -->
+    <div class="bento-item col-2 row-2 reveal">
+        <img src="https://images.unsplash.com/photo-1596033103445-6a56f671c6ca?auto=format&fit=crop&q=80&w=1200" alt="Grüne Ape Blumenmobil">
+        <div class="bento-content">
+            <h1>Mobile Blumenliebe auf Rädern</h1>
+            <p>Handwerk mit Herz in Wolfsburg & Umgebung.</p>
         </div>
     </div>
 
-    <header>
-        <nav class="container nav-flex">
-            <div class="logo">
-                <span class="logo-text">DIE FLORISTIN</span>
-            </div>
-            
-            <ul class="desktop-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="angebote.html">Angebote</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="ueber-uns.html">Über uns</a></li>
-                <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
-            </ul>
-
-            <div class="hamburger" onclick="openNav()">
-                <div class="bar"></div>
-                <div class="bar shorter"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
-    </header>
-
-    <section class="hero reveal">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <div class="hero-badge">Wolfsburgs mobile Blumenliebe</div>
-                <h1>Blumenliebe <br><span class="italic-serif">neu interpretiert.</span></h1>
-                <p>Handgefertigte Meisterstücke direkt aus unserer grünen Ape. Wir bringen die Natur stilvoll zu Ihnen – in den Steimker Gärten und ganz Wolfsburg [Image 1, Image 6].</p>
-                <div class="hero-ctas">
-                    <a href="angebote.html" class="btn btn-primary">Angebot entdecken</a>
-                    <a href="https://wa.me/4915142322963" class="btn btn-secondary">Direkt anfragen</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="main-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=1964&auto=format&fit=crop" alt="Premium Floristik Ape">
-                </div>
-                <div class="floating-card">
-                    <span>✨ Frischegarantie</span>
-                    <p>Täglich frisch gebunden.</p>
-                </div>
-            </div>
+    <!-- Philosophie -->
+    <div class="bento-item col-2 reveal" style="background: var(--mint); color: var(--mocha);">
+        <div style="padding: 2.5rem;">
+            <h2>Nachhaltig & Frisch</h2>
+            <p>Wir lieben Saisonalität. Unsere Blumen erzählen Geschichten aus der Region.</p>
+            <a href="ueber-uns.html" class="btn-premium" style="margin-top: 1.5rem;">Mehr erfahren</a>
         </div>
-    </section>
+    </div>
 
-    <main class="container">
-        <div class="bento-grid">
-            
-            <div class="bento-item col-8 image-card reveal" style="background-image: url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=2080&auto=format&fit=crop');">
-                <div class="card-overlay"></div>
-                <div class="card-content">
-                    <span class="tag">Unser Versprechen</span>
-                    <h2>Blumenhandwerk mit Herz</h2>
-                    <p>Individuelle Designs, die Geschichten erzählen. In den Steimker Gärten zuhause [Image 4].</p>
-                    <a href="ueber-uns.html" class="text-link">Unsere Story lesen →</a>
-                </div>
-            </div>
-
-            <div class="bento-item col-4 status-card reveal">
-                <div class="card-content">
-                    <div class="pulse-dot"></div>
-                    <h3>Heute in der Ape</h3>
-                    <p>Saisonale Highlights: Pfingstrosen & Eukalyptus-Variationen.</p>
-                    <a href="https://instagram.com/die_floristin_blumenhandwerk" class="insta-link">Live auf Instagram</a>
-                </div>
-            </div>
-
-            <div class="bento-item col-5 mint-card reveal">
-                <div class="card-content">
-                    <span class="tag">Creative</span>
-                    <h2>Events & Workshops</h2>
-                    <p>Lernen Sie die Kunst des Bindens bei exklusiven Events [Image 5].</p>
-                    <a href="events.html" class="btn btn-small">Termine finden</a>
-                </div>
-            </div>
-
-            <div class="bento-item col-7 image-card reveal" style="background-image: url('https://images.unsplash.com/photo-1519340241574-2c1939b9c5d5?q=80&w=2070&auto=format&fit=crop');">
-                <div class="card-overlay"></div>
-                <div class="card-content">
-                    <span class="tag">Luxus Selection</span>
-                    <h2>Ecuador Surprise</h2>
-                    <p>Großblütige Premium-Rosen für Momente, die bleiben.</p>
-                    <a href="angebote.html" class="btn btn-outline-white">Mehr erfahren</a>
-                </div>
-            </div>
-
+    <!-- Quick Link Workshops -->
+    <div class="bento-item reveal">
+        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=600" alt="Workshop">
+        <div class="bento-content">
+            <h3>Workshops</h3>
         </div>
+    </div>
 
-        <section class="testimonials reveal">
-            <div class="testimonial-slider">
-                <blockquote class="serif">"Die Ape war das absolute Highlight auf unserer Hochzeit. Die Blumen waren einfach traumhaft!"</blockquote>
-                <cite>— Julia S., Wolfsburg</cite>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <h2 class="serif">Die Floristin</h2>
-                <p>Wolfsburgs exklusives Blumenhandwerk.</p>
-            </div>
-            <div class="footer-info">
-                <p><strong>Atelier:</strong> Steimker Promenade 8, 38446 Wolfsburg</p>
-                <p><strong>WhatsApp:</strong> 015142322963</p>
-            </div>
-            <div class="footer-social">
-                <a href="#">Instagram</a>
-                <a href="#">Anfahrt</a>
-            </div>
+    <!-- Quick Link Shop -->
+    <div class="bento-item reveal">
+        <img src="https://images.unsplash.com/photo-1519340241574-2dec39624d21?auto=format&fit=crop&q=80&w=600" alt="Ecuador Surprise">
+        <div class="bento-content">
+            <h3>Angebote</h3>
         </div>
-    </footer>
+    </div>
 
-    <script>
-        function openNav() { document.getElementById("nav-overlay").style.height = "100%"; }
-        function closeNav() { document.getElementById("nav-overlay").style.height = "0%"; }
+    <!-- Akzent Box -->
+    <div class="bento-item col-2 reveal" style="background: var(--coral); display: flex; align-items: center; justify-content: center; text-align: center;">
+         <div style="padding: 2rem;">
+            <h2 style="color: white;">„Blumen sind das Lächeln der Erde.“</h2>
+         </div>
+    </div>
+</main>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('is-visible');
-            });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+<script>
+    function toggleMenu() {
+        document.body.classList.toggle('menu-open');
+    }
+
+    // Intersection Observer for Reveal Effects
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
