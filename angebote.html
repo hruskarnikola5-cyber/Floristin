@@ -1,22 +1,118 @@
-<!-- Hero Section innerhalb des Bento Grids -->
-<div class="bento-item col-4 reveal" style="background: var(--mocha);">
-    <div style="padding: 4rem; color: var(--vanilla);">
-        <h1>Exklusive Meisterstücke</h1>
-        <p>Vom Einzelstrauß bis zum B2B-Abonnement.</p>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angebote | Die Floristin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div class="bento-item col-2 row-2 reveal">
-    <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&q=80&w=800" alt="Ecuador Surprise">
-    <div class="bento-content">
-        <h2>Ecuador Surprise</h2>
-        <p>Exotische Pracht, die den Raum verwandelt.</p>
-    </div>
-</div>
+    <header>
+        <a href="index.html" class="logo">DIE FLORISTIN</a>
+        <button class="hamburger" aria-label="Menu öffnen">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
 
-<div class="bento-item col-2 reveal" style="border: 2px solid var(--mocha);">
-    <div style="padding: 2rem;">
-        <h3>Blumen-Abonnement</h3>
-        <p>Frische Akzente für Ihr Büro oder Zuhause. Wöchentlich geliefert mit der Ape.</p>
+    <div class="menu-overlay">
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="angebote.html">Angebote & Kreationen</a></li>
+                <li><a href="ueber-uns.html">Über Mich & Die Ape</a></li>
+                <li><a href="anfrage.html">Anfragen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
     </div>
-</div>
+
+    <section class="hero" style="height: 60vh;">
+        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1920&q=80" alt="Blumen" class="hero-img">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <h1 class="headline-lg">Angebote & Kreationen</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="split-section" style="margin-bottom: var(--spacing-lg);">
+                <div class="split-image image-wrapper reveal">
+                    <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=800&q=80" alt="Sträuße" class="img-hover">
+                </div>
+                <div class="split-text reveal">
+                    <span class="lead">Täglich frisch</span>
+                    <h2 class="headline-md">Sträuße an der Ape</h2>
+                    <p>Saisonale Blumen, gebunden mit Leidenschaft. Triff mich an meinen Standorten in Wolfsburg und nimm dir direkt ein Stück Frühling mit. Wir bieten auch Vorbestellungen für besondere Anlässe wie Muttertag oder Valentinstag an.</p>
+                </div>
+            </div>
+
+            <div class="split-section" style="flex-direction: row-reverse; margin-bottom: var(--spacing-lg);">
+                <div class="split-image image-wrapper reveal">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Hochzeit" class="img-hover">
+                </div>
+                <div class="split-text reveal">
+                    <span class="lead">Unvergesslich</span>
+                    <h2 class="headline-md">Hochzeiten & Events</h2>
+                    <p>Von der Brautstrauß-Beratung bis zur opulenten Tischdekoration. Gemeinsam kreieren wir ein florales Konzept, das eure Persönlichkeit widerspiegelt. Die Ape kann zudem als stylischer Eyecatcher gebucht werden.</p>
+                    <br>
+                    <a href="anfrage.html" class="btn btn-outline">Unverbindlich anfragen</a>
+                </div>
+            </div>
+            
+            <div class="split-section">
+                <div class="split-image image-wrapper reveal">
+                    <img src="https://images.unsplash.com/photo-1508264443919-15a31e1d9c1a?auto=format&fit=crop&w=800&q=80" alt="Abo" class="img-hover">
+                </div>
+                <div class="split-text reveal">
+                    <span class="lead">Premium Service</span>
+                    <h2 class="headline-md">Firmen-Abos</h2>
+                    <p>Ein einladendes Ambiente für dein Büro, deine Praxis oder dein Geschäft. Wir liefern regelmäßig frische, saisonale Gestecke direkt an deinen Standort im Raum Wolfsburg.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2 class="footer-logo">Die Floristin</h2>
+            <p>Blumenhandwerk mit Herz in Wolfsburg</p>
+            <div class="footer-links">
+                <a href="index.html">Startseite</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="#">Impressum</a>
+            </div>
+            <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2rem;">&copy; 2026 Die Floristin.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            if(hamburger.classList.contains('active')) {
+                document.querySelector('header').style.mixBlendMode = 'normal';
+                document.querySelector('.logo').style.color = 'var(--clr-bg)';
+                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = 'var(--clr-bg)');
+            } else {
+                document.querySelector('header').style.mixBlendMode = 'difference';
+                document.querySelector('.logo').style.color = '#fff';
+                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = '#fff');
+            }
+        });
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
