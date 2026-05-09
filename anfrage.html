@@ -1,17 +1,104 @@
-<section class="container" style="padding:50px 0">
-    <div class="bento-item col-8" style="margin:0 auto">
-        <h2 class="serif">Ihre blühende Anfrage</h2>
-        <form style="display:flex; flex-direction:column; gap:20px; margin-top:30px">
-            <input type="text" placeholder="Ihr Name" style="padding:15px; border-radius:10px; border:1px solid #ddd">
-            <input type="email" placeholder="E-Mail Adresse" style="padding:15px; border-radius:10px; border:1px solid #ddd">
-            <select style="padding:15px; border-radius:10px; border:1px solid #ddd">
-                <option>Anlass wählen...</option>
-                <option>Hochzeit</option>
-                <option>Workshop</option>
-                <option>Abo-Anfrage</option>
-            </select>
-            <textarea placeholder="Ihre Wünsche" rows="5" style="padding:15px; border-radius:10px; border:1px solid #ddd"></textarea>
-            <button type="submit" class="btn btn-primary">Anfrage absenden</button>
-        </form>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anfrage | Die Floristin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">DIE FLORISTIN</a>
+        <button class="hamburger" aria-label="Menu öffnen">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="menu-overlay">
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="angebote.html">Angebote & Kreationen</a></li>
+                <li><a href="ueber-uns.html">Über Mich & Die Ape</a></li>
+                <li><a href="anfrage.html">Anfragen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
     </div>
-</section>
+
+    <section class="section" style="padding-top: 15vh;">
+        <div class="container reveal">
+            <div class="text-center" style="margin-bottom: var(--spacing-md);">
+                <span class="lead">Lass uns planen</span>
+                <h1 class="headline-md">Deine Anfrage</h1>
+                <p>Ob für deine Hochzeit oder ein individuelles Blumen-Abo – ich freue mich auf deine Nachricht.</p>
+            </div>
+
+            <form class="premium-form reveal" style="max-width: 600px; margin: 0 auto;">
+                <div class="form-group">
+                    <input type="text" placeholder="Dein Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Deine E-Mail Adresse" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="" disabled selected>Anlass wählen</option>
+                        <option value="hochzeit">Hochzeit</option>
+                        <option value="event">Event</option>
+                        <option value="abo">Abo</option>
+                        <option value="sonstiges">Sonstiges</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Deine Wünsche..." required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Absenden</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2 class="footer-logo">Die Floristin</h2>
+            <p>Blumenhandwerk mit Herz in Wolfsburg</p>
+            <div class="footer-links">
+                <a href="index.html">Startseite</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="#">Impressum</a>
+            </div>
+            <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2rem;">&copy; 2026 Die Floristin.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            if(hamburger.classList.contains('active')) {
+                document.querySelector('header').style.mixBlendMode = 'normal';
+                document.querySelector('.logo').style.color = 'var(--clr-bg)';
+                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = 'var(--clr-bg)');
+            } else {
+                document.querySelector('header').style.mixBlendMode = 'difference';
+                document.querySelector('.logo').style.color = '#fff';
+                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = '#fff');
+            }
+        });
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
