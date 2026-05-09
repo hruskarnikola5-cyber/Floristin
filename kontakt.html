@@ -1,10 +1,100 @@
-<section class="container" style="padding:50px 0">
-    <div class="bento-item col-12">
-        <h2 class="serif">So erreichen Sie uns</h2>
-        <p><strong>Standort:</strong> Steimker Promenade 8, 38446 Wolfsburg</p>
-        <p><strong>Öffnungszeiten:</strong> Di-Fr: 08:30 - 17:30 | Sa: 08:00 - 13:00 [20]</p>
-        <div style="margin-top:30px">
-             <a href="https://wa.me/4915142322963" class="btn btn-primary">WhatsApp Nachricht senden</a>
-        </div>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Die Floristin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">DIE FLORISTIN</a>
+        <button class="hamburger" aria-label="Menu öffnen">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="menu-overlay">
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="angebote.html">Angebote & Kreationen</a></li>
+                <li><a href="ueber-uns.html">Über Mich & Die Ape</a></li>
+                <li><a href="anfrage.html">Anfragen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
     </div>
-</section>
+
+    <section class="section bg-alt" style="padding-top: 15vh; min-height: 100vh;">
+        <div class="container split-section reveal">
+            <div class="split-text">
+                <span class="lead">Kontakt</span>
+                <h1 class="headline-md">Ich freue mich auf dich.</h1>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-family: var(--font-body); font-weight: 600;">Telefon & WhatsApp</h3>
+                    <p style="font-size: 1.5rem;"><a href="tel:+4915142322963">0151 423 22 963</a></p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-family: var(--font-body); font-weight: 600;">Standort</h3>
+                    <p>Steimker Promenade 8<br>38446 Wolfsburg</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-family: var(--font-body); font-weight: 600;">Folge mir</h3>
+                    <p>@die_floristin_blumenhandwerk</p>
+                </div>
+                
+                <a href="anfrage.html" class="btn btn-primary">Jetzt Anfrage senden</a>
+            </div>
+
+            <div class="split-image image-wrapper">
+                <img src="https://images.unsplash.com/photo-1534073133331-c4c622668a0a?auto=format&fit=crop&w=800&q=80" alt="Kontakt Bild" class="img-hover">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2 class="footer-logo">Die Floristin</h2>
+            <p>Blumenhandwerk mit Herz in Wolfsburg</p>
+            <div class="footer-links">
+                <a href="index.html">Startseite</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="#">Impressum</a>
+            </div>
+            <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2rem;">&copy; 2026 Die Floristin.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            if(hamburger.classList.contains('active')) {
+                document.querySelector('header').style.mixBlendMode = 'normal';
+                document.querySelector('.logo').style.color = 'var(--clr-bg)';
+                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = 'var(--clr-bg)');
+            } else {
+                document.querySelector('header').style.mixBlendMode = 'difference';
+                document.querySelector('.logo').style.color = '#fff';
+                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = '#fff');
+            }
+        });
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
