@@ -1,9 +1,91 @@
-<section class="container" style="padding:50px 0; display:grid; grid-template-columns:1fr 1fr; gap:50px">
-    <div>
-        <h1 class="serif">Blumenhandwerk mit Herz</h1>
-        <p>Hinter "Die Floristin" steht die Leidenschaft für echte Naturmaterialien und individuelles Design. Wir glauben daran, dass Blumen mehr sagen als tausend Worte.[16, 17]</p>
-        <p style="margin-top:20px">Unsere Ape ist nicht nur ein Transportmittel, sondern ein Symbol für Flexibilität und die Liebe zum Handwerk.</p>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über Uns | Die Floristin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">DIE FLORISTIN</a>
+        <button class="hamburger" aria-label="Menu öffnen">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="menu-overlay">
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="angebote.html">Angebote & Kreationen</a></li>
+                <li><a href="ueber-uns.html">Über Mich & Die Ape</a></li>
+                <li><a href="anfrage.html">Anfragen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
     </div>
-    <div style="background:var(--mint-soft); border-radius:var(--radius); min-height:300px">
+
+    <section class="section bg-alt" style="padding-top: 15vh;">
+        <div class="container text-center reveal">
+            <span class="lead">Die Geschichte</span>
+            <h1 class="headline-md">Handwerk mit Herz.</h1>
+            <p style="max-width: 700px; margin: 0 auto;">"Die Floristin" ist mehr als ein Beruf – es ist meine Berufung. Mit meiner grünen Ape bringe ich die Schönheit der Natur direkt dorthin, wo Menschen zusammenkommen.</p>
         </div>
-</section>
+    </section>
+
+    <section class="section">
+        <div class="container split-section">
+            <div class="split-text reveal">
+                <h2 class="headline-md">Blumenliebe auf Rädern</h2>
+                <p>Seit der Gründung meines kleinen Blumenhandwerks ist die Ape mein treuer Begleiter. In Wolfsburg und Umgebung, besonders in den Steimker Gärten, bin ich für meine Leidenschaft zum Detail bekannt. <br><br>Jeder Zweig, jede Blüte wird von mir persönlich ausgewählt. Ich glaube an nachhaltiges Handwerk und regionale Verbundenheit.</p>
+            </div>
+            <div class="split-image image-wrapper reveal">
+                <img src="https://images.unsplash.com/photo-1544833058-e70f666f4ea2?auto=format&fit=crop&w=800&q=80" alt="Floristin bei der Arbeit" class="img-hover">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2 class="footer-logo">Die Floristin</h2>
+            <p>Blumenhandwerk mit Herz in Wolfsburg</p>
+            <div class="footer-links">
+                <a href="index.html">Startseite</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="#">Impressum</a>
+            </div>
+            <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2rem;">&copy; 2026 Die Floristin.</p>
+        </div>
+    </footer>
+
+    <script>
+        /* JS wie oben (Wichtig: In jede Datei kopieren) */
+        const hamburger = document.querySelector('.hamburger');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            if(hamburger.classList.contains('active')) {
+                document.querySelector('header').style.mixBlendMode = 'normal';
+                document.querySelector('.logo').style.color = 'var(--clr-bg)';
+                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = 'var(--clr-bg)');
+            } else {
+                document.querySelector('header').style.mixBlendMode = 'difference';
+                document.querySelector('.logo').style.color = '#fff';
+                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = '#fff');
+            }
+        });
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
