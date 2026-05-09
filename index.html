@@ -10,14 +10,14 @@
 <body>
 
     <div id="nav-overlay" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button class="closebtn" onclick="closeNav()">&times;</button>
         <div class="overlay-content">
-            <a href="index.html" onclick="closeNav()">Home</a>
-            <a href="angebote.html" onclick="closeNav()">Angebote</a>
-            <a href="events.html" onclick="closeNav()">Events</a>
-            <a href="ueber-uns.html" onclick="closeNav()">Über uns</a>
-            <a href="kontakt.html" onclick="closeNav()">Kontakt</a>
-            <a href="anfrage.html" onclick="closeNav()" class="highlight">Anfrage</a>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="angebote.html" class="nav-item">Angebote</a>
+            <a href="events.html" class="nav-item">Events</a>
+            <a href="ueber-uns.html" class="nav-item">Über uns</a>
+            <a href="kontakt.html" class="nav-item">Kontakt</a>
+            <a href="anfrage.html" class="nav-item special-link">Anfrage</a>
         </div>
     </div>
 
@@ -43,52 +43,57 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero reveal">
+        <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=1964&auto=format&fit=crop" alt="Premium Floristik Ape">
+        </div>
         <div class="hero-inner container">
-            <div class="hero-badge">Frisch aus der Ape</div>
-            <h1>Mobile Blumenliebe <br><span>auf Rädern.</span></h1>
-            <p>Wir verwandeln Momente in blühende Erinnerungen. Handgefertigte Premium-Floristik in Wolfsburg & Umgebung.</p>
+            <div class="hero-badge">Exklusiv in Wolfsburg</div>
+            <h1>Blumenliebe <br><span class="italic-serif">neu definiert.</span></h1>
+            <p>Handgefertigte Meisterstücke aus unserer grünen Ape. Wir bringen die Natur direkt zu Ihnen – stilvoll, frisch und mit Herz.</p>
             <div class="hero-ctas">
-                <a href="angebote.html" class="btn btn-primary">Unsere Angebote</a>
-                <a href="anfrage.html" class="btn btn-outline">Jetzt anfragen</a>
+                <a href="angebote.html" class="btn btn-primary">Angebote entdecken</a>
+                <a href="anfrage.html" class="btn btn-outline">Termin anfragen</a>
             </div>
         </div>
     </section>
 
     <main class="container">
         <div class="bento-grid">
-            <div class="bento-item col-7 image-card" style="background-image: url('img/ape-nahaufnahme.jpg');">
+            
+            <div class="bento-item col-8 image-card reveal" style="background-image: url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=2080&auto=format&fit=crop');">
                 <div class="card-content">
-                    <span class="tag">Unser Markenzeichen</span>
+                    <span class="tag">Unser Handwerk</span>
                     <h2>Blumenhandwerk mit Herz</h2>
-                    <p>Unsere grüne Piaggio Ape ist mehr als ein Lieferwagen – sie ist eine rollende Werkstatt für Ihre Träume [Image 1, Image 6].</p>
+                    <p>In den Steimker Gärten verwurzelt, in ganz Wolfsburg für Sie unterwegs.</p>
                 </div>
             </div>
 
-            <div class="bento-item col-5 coral-bg">
+            <div class="bento-item col-4 coral-card reveal">
                 <div class="card-content">
                     <h2>Frisch gebunden.</h2>
-                    <p>In den Steimker Gärten zuhause, in ganz Wolfsburg für Sie unterwegs [Image 4].</p>
+                    <p>Täglich neue Kreationen direkt aus unserer mobilen Werkstatt.</p>
                     <div class="status-indicator">● Heute verfügbar</div>
                 </div>
             </div>
 
-            <div class="bento-item col-4 mint-bg">
+            <div class="bento-item col-5 mint-card reveal">
                 <div class="card-content">
                     <h3>Workshops</h3>
-                    <p>Lernen Sie das Binden von Flowercrowns in unseren exklusiven Events [Image 5].</p>
-                    <a href="events.html" class="arrow-link">Termine ansehen →</a>
+                    <p>Lernen Sie die Kunst des Bindens in unseren exklusiven Events.</p>
+                    <a href="events.html" class="arrow-link">Zu den Terminen →</a>
                 </div>
             </div>
 
-            <div class="bento-item col-8 image-card" style="background-image: url('img/premium-bouquet.jpg');">
+            <div class="bento-item col-7 image-card reveal" style="background-image: url('https://images.unsplash.com/photo-1519340241574-2c1939b9c5d5?q=80&w=2070&auto=format&fit=crop');">
                 <div class="card-content">
-                    <span class="tag">Bestseller</span>
+                    <span class="tag">Highlight</span>
                     <h2>Ecuador Surprise</h2>
-                    <p>Großblütige Luxus-Rosen für die besonderen Menschen in Ihrem Leben.</p>
-                    <a href="angebote.html" class="btn btn-small">Entdecken</a>
+                    <p>Die Königin der Rosen für Ihre besonderen Momente.</p>
+                    <a href="angebote.html" class="btn btn-small">Details ansehen</a>
                 </div>
             </div>
+
         </div>
     </main>
 
@@ -99,7 +104,7 @@
                 <p>Blumenhandwerk mit Herz.</p>
             </div>
             <div class="footer-contact">
-                <p><strong>Standort:</strong> Steimker Promenade 8, 38446 Wolfsburg</p>
+                <p><strong>Standort:</strong> Steimker Promenade 8, Wolfsburg</p>
                 <p><strong>WhatsApp:</strong> 015142322963</p>
             </div>
             <div class="footer-social">
@@ -110,8 +115,21 @@
     </footer>
 
     <script>
-        function openNav() { document.getElementById("nav-overlay").style.width = "100%"; }
-        function closeNav() { document.getElementById("nav-overlay").style.width = "0%"; }
+        /* Hamburger Menu Logic */
+        function openNav() { document.getElementById("nav-overlay").style.height = "100%"; }
+        function closeNav() { document.getElementById("nav-overlay").style.height = "0%"; }
+
+        /* Smooth Reveal Animation on Scroll */
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
