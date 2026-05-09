@@ -2,64 +2,116 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Die Floristin | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Floristin | Exklusives Blumenhandwerk Wolfsburg</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div id="nav-overlay" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html" onclick="closeNav()">Home</a>
+            <a href="angebote.html" onclick="closeNav()">Angebote</a>
+            <a href="events.html" onclick="closeNav()">Events</a>
+            <a href="ueber-uns.html" onclick="closeNav()">Über uns</a>
+            <a href="kontakt.html" onclick="closeNav()">Kontakt</a>
+            <a href="anfrage.html" onclick="closeNav()" class="highlight">Anfrage</a>
+        </div>
+    </div>
+
     <header>
-        <nav class="container">
-            <div class="logo"><strong>DIE FLORISTIN</strong></div>
-            <ul>
+        <nav class="container nav-flex">
+            <div class="logo">
+                <span class="logo-text">DIE FLORISTIN</span>
+            </div>
+            
+            <ul class="desktop-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="angebote.html">Angebote</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="ueber-uns.html">Über uns</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
+
+            <div class="hamburger" onclick="openNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <section class="hero container">
-        <h1>Mobile Blumenliebe auf Rädern</h1>
-        <p>Handgefertigte Floristik direkt aus unserer Ape in Wolfsburg.</p>
-        <a href="angebote.html" class="btn btn-primary">Unsere Angebote</a>
-        <a href="anfrage.html" class="btn btn-secondary">WhatsApp Anfrage</a>
+    <section class="hero">
+        <div class="hero-inner container">
+            <div class="hero-badge">Frisch aus der Ape</div>
+            <h1>Mobile Blumenliebe <br><span>auf Rädern.</span></h1>
+            <p>Wir verwandeln Momente in blühende Erinnerungen. Handgefertigte Premium-Floristik in Wolfsburg & Umgebung.</p>
+            <div class="hero-ctas">
+                <a href="angebote.html" class="btn btn-primary">Unsere Angebote</a>
+                <a href="anfrage.html" class="btn btn-outline">Jetzt anfragen</a>
+            </div>
+        </div>
     </section>
 
     <main class="container">
         <div class="bento-grid">
-            <div class="bento-item col-8 mint-bg">
-                <h2 class="serif">Blumenhandwerk mit Herz</h2>
-                <p>In den Steimker Gärten zuhause, in ganz Wolfsburg unterwegs. Wir bringen frische Blüten direkt zu Ihnen.</p>
+            <div class="bento-item col-7 image-card" style="background-image: url('img/ape-nahaufnahme.jpg');">
+                <div class="card-content">
+                    <span class="tag">Unser Markenzeichen</span>
+                    <h2>Blumenhandwerk mit Herz</h2>
+                    <p>Unsere grüne Piaggio Ape ist mehr als ein Lieferwagen – sie ist eine rollende Werkstatt für Ihre Träume [Image 1, Image 6].</p>
+                </div>
             </div>
-            <div class="bento-item col-4">
-                <h3 class="serif">Unsere Ape</h3>
-                <p>Entdecken Sie unsere grüne Piaggio Ape – das mobile Blumenparadies auf drei Rädern [Image 1, Image 6].</p>
+
+            <div class="bento-item col-5 coral-bg">
+                <div class="card-content">
+                    <h2>Frisch gebunden.</h2>
+                    <p>In den Steimker Gärten zuhause, in ganz Wolfsburg für Sie unterwegs [Image 4].</p>
+                    <div class="status-indicator">● Heute verfügbar</div>
+                </div>
             </div>
-            <div class="bento-item col-12">
-                <h2 class="serif" style="text-align:center">Was uns besonders macht</h2>
-                <div style="display:flex; gap:20px; margin-top:30px; flex-wrap:wrap">
-                    <div style="flex:1; background:var(--cream); padding:20px; border-radius:20px">✨ Täglich frisch</div>
-                    <div style="flex:1; background:var(--cream); padding:20px; border-radius:20px">🌸 Individuelle Designs</div>
-                    <div style="flex:1; background:var(--cream); padding:20px; border-radius:20px">📍 Regionaler Fokus</div>
+
+            <div class="bento-item col-4 mint-bg">
+                <div class="card-content">
+                    <h3>Workshops</h3>
+                    <p>Lernen Sie das Binden von Flowercrowns in unseren exklusiven Events [Image 5].</p>
+                    <a href="events.html" class="arrow-link">Termine ansehen →</a>
+                </div>
+            </div>
+
+            <div class="bento-item col-8 image-card" style="background-image: url('img/premium-bouquet.jpg');">
+                <div class="card-content">
+                    <span class="tag">Bestseller</span>
+                    <h2>Ecuador Surprise</h2>
+                    <p>Großblütige Luxus-Rosen für die besonderen Menschen in Ihrem Leben.</p>
+                    <a href="angebote.html" class="btn btn-small">Entdecken</a>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container footer-grid">
-            <div>
-                <h3 class="serif">Kontakt</h3>
-                <p>Telefon/WhatsApp: 015142322963</p>
-                <p>Steimker Promenade 8, 38446 Wolfsburg</p>
+            <div class="footer-brand">
+                <h2 class="serif">Die Floristin</h2>
+                <p>Blumenhandwerk mit Herz.</p>
             </div>
-            <div>
-                <h3 class="serif">Folgen Sie uns</h3>
-                <p>@die_floristin_blumenhandwerk</p>
+            <div class="footer-contact">
+                <p><strong>Standort:</strong> Steimker Promenade 8, 38446 Wolfsburg</p>
+                <p><strong>WhatsApp:</strong> 015142322963</p>
+            </div>
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="https://wa.me/4915142322963">WhatsApp</a>
             </div>
         </div>
     </footer>
+
+    <script>
+        function openNav() { document.getElementById("nav-overlay").style.width = "100%"; }
+        function closeNav() { document.getElementById("nav-overlay").style.width = "0%"; }
+    </script>
 </body>
 </html>
