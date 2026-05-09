@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Die Floristin | Exklusives Blumenhandwerk Wolfsburg</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div id="nav-overlay" class="overlay">
         <button class="closebtn" onclick="closeNav()">&times;</button>
         <div class="overlay-content">
-            <a href="index.html" class="nav-item">Home</a>
+            <a href="index.html" class="nav-item active">Home</a>
             <a href="angebote.html" class="nav-item">Angebote</a>
             <a href="events.html" class="nav-item">Events</a>
             <a href="ueber-uns.html" class="nav-item">Über uns</a>
             <a href="kontakt.html" class="nav-item">Kontakt</a>
-            <a href="anfrage.html" class="nav-item special-link">Anfrage</a>
+            <a href="anfrage.html" class="nav-item cta-menu">Anfrage stellen</a>
         </div>
     </div>
 
@@ -32,28 +32,36 @@
                 <li><a href="angebote.html">Angebote</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="ueber-uns.html">Über uns</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
             </ul>
 
             <div class="hamburger" onclick="openNav()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="bar"></div>
+                <div class="bar shorter"></div>
+                <div class="bar"></div>
             </div>
         </nav>
     </header>
 
     <section class="hero reveal">
-        <div class="hero-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=1964&auto=format&fit=crop" alt="Premium Floristik Ape">
-        </div>
-        <div class="hero-inner container">
-            <div class="hero-badge">Exklusiv in Wolfsburg</div>
-            <h1>Blumenliebe <br><span class="italic-serif">neu definiert.</span></h1>
-            <p>Handgefertigte Meisterstücke aus unserer grünen Ape. Wir bringen die Natur direkt zu Ihnen – stilvoll, frisch und mit Herz.</p>
-            <div class="hero-ctas">
-                <a href="angebote.html" class="btn btn-primary">Angebote entdecken</a>
-                <a href="anfrage.html" class="btn btn-outline">Termin anfragen</a>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="hero-badge">Wolfsburgs mobile Blumenliebe</div>
+                <h1>Blumenliebe <br><span class="italic-serif">neu interpretiert.</span></h1>
+                <p>Handgefertigte Meisterstücke direkt aus unserer grünen Ape. Wir bringen die Natur stilvoll zu Ihnen – in den Steimker Gärten und ganz Wolfsburg [Image 1, Image 6].</p>
+                <div class="hero-ctas">
+                    <a href="angebote.html" class="btn btn-primary">Angebot entdecken</a>
+                    <a href="https://wa.me/4915142322963" class="btn btn-secondary">Direkt anfragen</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="main-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=1964&auto=format&fit=crop" alt="Premium Floristik Ape">
+                </div>
+                <div class="floating-card">
+                    <span>✨ Frischegarantie</span>
+                    <p>Täglich frisch gebunden.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -62,73 +70,79 @@
         <div class="bento-grid">
             
             <div class="bento-item col-8 image-card reveal" style="background-image: url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=2080&auto=format&fit=crop');">
+                <div class="card-overlay"></div>
                 <div class="card-content">
-                    <span class="tag">Unser Handwerk</span>
+                    <span class="tag">Unser Versprechen</span>
                     <h2>Blumenhandwerk mit Herz</h2>
-                    <p>In den Steimker Gärten verwurzelt, in ganz Wolfsburg für Sie unterwegs.</p>
+                    <p>Individuelle Designs, die Geschichten erzählen. In den Steimker Gärten zuhause [Image 4].</p>
+                    <a href="ueber-uns.html" class="text-link">Unsere Story lesen →</a>
                 </div>
             </div>
 
-            <div class="bento-item col-4 coral-card reveal">
+            <div class="bento-item col-4 status-card reveal">
                 <div class="card-content">
-                    <h2>Frisch gebunden.</h2>
-                    <p>Täglich neue Kreationen direkt aus unserer mobilen Werkstatt.</p>
-                    <div class="status-indicator">● Heute verfügbar</div>
+                    <div class="pulse-dot"></div>
+                    <h3>Heute in der Ape</h3>
+                    <p>Saisonale Highlights: Pfingstrosen & Eukalyptus-Variationen.</p>
+                    <a href="https://instagram.com/die_floristin_blumenhandwerk" class="insta-link">Live auf Instagram</a>
                 </div>
             </div>
 
             <div class="bento-item col-5 mint-card reveal">
                 <div class="card-content">
-                    <h3>Workshops</h3>
-                    <p>Lernen Sie die Kunst des Bindens in unseren exklusiven Events.</p>
-                    <a href="events.html" class="arrow-link">Zu den Terminen →</a>
+                    <span class="tag">Creative</span>
+                    <h2>Events & Workshops</h2>
+                    <p>Lernen Sie die Kunst des Bindens bei exklusiven Events [Image 5].</p>
+                    <a href="events.html" class="btn btn-small">Termine finden</a>
                 </div>
             </div>
 
             <div class="bento-item col-7 image-card reveal" style="background-image: url('https://images.unsplash.com/photo-1519340241574-2c1939b9c5d5?q=80&w=2070&auto=format&fit=crop');">
+                <div class="card-overlay"></div>
                 <div class="card-content">
-                    <span class="tag">Highlight</span>
+                    <span class="tag">Luxus Selection</span>
                     <h2>Ecuador Surprise</h2>
-                    <p>Die Königin der Rosen für Ihre besonderen Momente.</p>
-                    <a href="angebote.html" class="btn btn-small">Details ansehen</a>
+                    <p>Großblütige Premium-Rosen für Momente, die bleiben.</p>
+                    <a href="angebote.html" class="btn btn-outline-white">Mehr erfahren</a>
                 </div>
             </div>
 
         </div>
+
+        <section class="testimonials reveal">
+            <div class="testimonial-slider">
+                <blockquote class="serif">"Die Ape war das absolute Highlight auf unserer Hochzeit. Die Blumen waren einfach traumhaft!"</blockquote>
+                <cite>— Julia S., Wolfsburg</cite>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-brand">
                 <h2 class="serif">Die Floristin</h2>
-                <p>Blumenhandwerk mit Herz.</p>
+                <p>Wolfsburgs exklusives Blumenhandwerk.</p>
             </div>
-            <div class="footer-contact">
-                <p><strong>Standort:</strong> Steimker Promenade 8, Wolfsburg</p>
+            <div class="footer-info">
+                <p><strong>Atelier:</strong> Steimker Promenade 8, 38446 Wolfsburg</p>
                 <p><strong>WhatsApp:</strong> 015142322963</p>
             </div>
             <div class="footer-social">
                 <a href="#">Instagram</a>
-                <a href="https://wa.me/4915142322963">WhatsApp</a>
+                <a href="#">Anfahrt</a>
             </div>
         </div>
     </footer>
 
     <script>
-        /* Hamburger Menu Logic */
         function openNav() { document.getElementById("nav-overlay").style.height = "100%"; }
         function closeNav() { document.getElementById("nav-overlay").style.height = "0%"; }
 
-        /* Smooth Reveal Animation on Scroll */
-        const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('is-visible');
             });
-        }, observerOptions);
-
+        }, { threshold: 0.15 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
