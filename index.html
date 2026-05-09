@@ -3,85 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Die Floristin | Blumenhandwerk mit Herz</title>
+    <title>Die Floristin | Blumenhandwerk mit Herz in Wolfsburg</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <a href="index.html" class="logo">DIE FLORISTIN</a>
-    <button class="menu-trigger" onclick="toggleMenu()">
-        <div class="hamburger"></div>
-    </button>
-</header>
+    <header>
+        <a href="index.html" class="logo">DIE FLORISTIN</a>
+        <button class="hamburger" aria-label="Menu öffnen">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
 
-<nav id="menu-overlay">
-    <a href="index.html">Home</a>
-    <a href="angebote.html">Angebote</a>
-    <a href="ueber-uns.html">Über Uns</a>
-    <a href="events.html">Events</a>
-    <a href="anfrage.html">Anfrage</a>
-    <a href="kontakt.html">Kontakt</a>
-</nav>
+    <div class="menu-overlay">
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="angebote.html">Angebote & Kreationen</a></li>
+                <li><a href="ueber-uns.html">Über Mich & Die Ape</a></li>
+                <li><a href="anfrage.html">Anfragen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
 
-<main class="bento-container">
-    <!-- Hero Block -->
-    <div class="bento-item col-2 row-2 reveal">
-        <img src="https://images.unsplash.com/photo-1596033103445-6a56f671c6ca?auto=format&fit=crop&q=80&w=1200" alt="Grüne Ape Blumenmobil">
-        <div class="bento-content">
-            <h1>Mobile Blumenliebe auf Rädern</h1>
-            <p>Handwerk mit Herz in Wolfsburg & Umgebung.</p>
+    <section class="hero">
+        <!-- Hochwertiges Platzhalterbild: Blumen-Truck/Ape -->
+        <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=1920&q=80" alt="Grüne Blumen-Ape" class="hero-img">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <span class="lead">Blumenhandwerk mit Herz</span>
+            <h1 class="headline-lg">Mobile Blumenliebe auf Rädern.</h1>
+            <a href="angebote.html" class="btn btn-primary">Entdecke den Frühling</a>
         </div>
-    </div>
+    </section>
 
-    <!-- Philosophie -->
-    <div class="bento-item col-2 reveal" style="background: var(--mint); color: var(--mocha);">
-        <div style="padding: 2.5rem;">
-            <h2>Nachhaltig & Frisch</h2>
-            <p>Wir lieben Saisonalität. Unsere Blumen erzählen Geschichten aus der Region.</p>
-            <a href="ueber-uns.html" class="btn-premium" style="margin-top: 1.5rem;">Mehr erfahren</a>
+    <section class="section">
+        <div class="container split-section">
+            <div class="split-text reveal">
+                <span class="lead">Die Floristin</span>
+                <h2 class="headline-md">Blühende Emotionen für Wolfsburg & Umgebung.</h2>
+                <p>Jeder Strauß erzählt eine Geschichte. Mit meiner grünen Blumen-Ape bringe ich florale Highlights direkt zu dir. Ob Muttertag an der Steimker Promenade, Hochzeiten oder kleine Geschenke – wir kreieren Handwerk, das berührt.</p>
+                <br>
+                <a href="ueber-uns.html" class="btn btn-outline">Lerne mich kennen</a>
+            </div>
+            <div class="split-image image-wrapper reveal">
+                <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=800&q=80" alt="Florales Arrangement" class="img-hover">
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Quick Link Workshops -->
-    <div class="bento-item reveal">
-        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=600" alt="Workshop">
-        <div class="bento-content">
-            <h3>Workshops</h3>
+    <section class="section bg-alt text-center">
+        <div class="container reveal">
+            <span class="lead">Portfolio</span>
+            <h2 class="headline-md">Unsere floralen Leidenschaften</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1561181286-d3fee7d55ef6?auto=format&fit=crop&w=600&q=80" alt="Frische Sträuße" class="img-hover"></div>
+                    <h3>Frische Sträuße</h3>
+                    <p>Liebevoll gebunden zum Mitnehmen an der Ape.</p>
+                </div>
+                <div class="card">
+                    <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" alt="Hochzeit" class="img-hover"></div>
+                    <h3>Events & Hochzeiten</h3>
+                    <p>Dein unvergesslicher Tag in voller Blüte.</p>
+                </div>
+                <div class="card">
+                    <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1610631066894-0290ba820eba?auto=format&fit=crop&w=600&q=80" alt="Geschenke" class="img-hover"></div>
+                    <h3>Präsente & Dekoration</h3>
+                    <p>Saisonale Highlights und Deko-Pflanzen.</p>
+                </div>
+            </div>
+            <br><br>
+            <a href="angebote.html" class="btn btn-primary">Alle Leistungen ansehen</a>
         </div>
-    </div>
+    </section>
 
-    <!-- Quick Link Shop -->
-    <div class="bento-item reveal">
-        <img src="https://images.unsplash.com/photo-1519340241574-2dec39624d21?auto=format&fit=crop&q=80&w=600" alt="Ecuador Surprise">
-        <div class="bento-content">
-            <h3>Angebote</h3>
+    <footer>
+        <div class="container">
+            <h2 class="footer-logo">Die Floristin</h2>
+            <p>Blumenhandwerk mit Herz in Wolfsburg</p>
+            <div class="footer-links">
+                <a href="index.html">Startseite</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a> <!-- Platzhalter für Datei 6 -->
+            </div>
+            <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Die Floristin.</p>
         </div>
-    </div>
+    </footer>
 
-    <!-- Akzent Box -->
-    <div class="bento-item col-2 reveal" style="background: var(--coral); display: flex; align-items: center; justify-content: center; text-align: center;">
-         <div style="padding: 2rem;">
-            <h2 style="color: white;">„Blumen sind das Lächeln der Erde.“</h2>
-         </div>
-    </div>
-</main>
-
+    <!-- JS Snippet hier einfügen -->
 <script>
-    function toggleMenu() {
-        document.body.classList.toggle('menu-open');
-    }
+    // Menü Steuerung
+    const hamburger = document.querySelector('.hamburger');
+    const menuOverlay = document.querySelector('.menu-overlay');
 
-    // Intersection Observer for Reveal Effects
-    const observerOptions = { threshold: 0.1 };
-    const observer = new IntersectionObserver((entries) => {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        // Ändert die Farbe des Headers je nach Menü-Status
+        if(hamburger.classList.contains('active')) {
+            document.querySelector('header').style.mixBlendMode = 'normal';
+            document.querySelector('.logo').style.color = 'var(--clr-bg)';
+            document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = 'var(--clr-bg)');
+        } else {
+            document.querySelector('header').style.mixBlendMode = 'difference';
+            document.querySelector('.logo').style.color = '#fff';
+            document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = '#fff');
+        }
+    });
+
+    // Scroll Reveal Animation (Intersection Observer)
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('active');
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
         });
-    }, observerOptions);
+    }, { threshold: 0.15 });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    revealElements.forEach(el => revealObserver.observe(el));
 </script>
 </body>
 </html>
