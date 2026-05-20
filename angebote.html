@@ -27,8 +27,8 @@
         </nav>
     </div>
 
-    <section class="hero" style="height: 60vh;">
-        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1920&q=80" alt="Blumen" class="hero-img">
+    <section class="hero" style="height: 60vh; padding-top: 0;">
+        <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=1920&q=80" alt="Florale Vielfalt" class="hero-img">
         <div class="hero-overlay"></div>
         <div class="hero-content reveal">
             <h1 class="headline-lg">Angebote & Kreationen</h1>
@@ -39,7 +39,7 @@
         <div class="container">
             <div class="split-section" style="margin-bottom: var(--spacing-lg);">
                 <div class="split-image image-wrapper reveal">
-                    <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=800&q=80" alt="Sträuße" class="img-hover">
+                    <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=800&q=80" alt="Frische handgebundene To-Go Sträuße am Verkaufswagen" class="img-hover">
                 </div>
                 <div class="split-text reveal">
                     <span class="lead">Täglich frisch</span>
@@ -63,7 +63,7 @@
             
             <div class="split-section">
                 <div class="split-image image-wrapper reveal">
-                    <img src="https://images.unsplash.com/photo-1508264443919-15a31e1d9c1a?auto=format&fit=crop&w=800&q=80" alt="Abo" class="img-hover">
+                    <img src="https://images.unsplash.com/photo-1583318357248-f67f2e196435?auto=format&fit=crop&w=800&q=80" alt="Stilvolles Blumenarrangement in modernem Wolfsburger Büro" class="img-hover">
                 </div>
                 <div class="split-text reveal">
                     <span class="lead">Premium Service</span>
@@ -82,6 +82,7 @@
                 <a href="index.html">Startseite</a>
                 <a href="kontakt.html">Kontakt</a>
                 <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
             </div>
             <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2rem;">&copy; 2026 Die Floristin.</p>
         </div>
@@ -94,13 +95,9 @@
             hamburger.classList.toggle('active');
             menuOverlay.classList.toggle('active');
             if(hamburger.classList.contains('active')) {
-                document.querySelector('header').style.mixBlendMode = 'normal';
                 document.querySelector('.logo').style.color = 'var(--clr-bg)';
-                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = 'var(--clr-bg)');
             } else {
-                document.querySelector('header').style.mixBlendMode = 'difference';
-                document.querySelector('.logo').style.color = '#fff';
-                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = '#fff');
+                document.querySelector('.logo').style.color = 'var(--clr-text)';
             }
         });
         const revealElements = document.querySelectorAll('.reveal');
