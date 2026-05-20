@@ -26,7 +26,7 @@
         </nav>
     </div>
 
-    <section class="section" style="padding-top: 15vh;">
+    <section class="section" style="padding-top: 20vh;">
         <div class="container reveal">
             <div class="text-center" style="margin-bottom: var(--spacing-md);">
                 <span class="lead">Lass uns planen</span>
@@ -34,7 +34,7 @@
                 <p>Ob für deine Hochzeit oder ein individuelles Blumen-Abo – ich freue mich auf deine Nachricht.</p>
             </div>
 
-            <form class="premium-form reveal" style="max-width: 600px; margin: 0 auto;">
+            <form class="premium-form reveal">
                 <div class="form-group">
                     <input type="text" placeholder="Dein Name" required>
                 </div>
@@ -53,6 +53,12 @@
                 <div class="form-group">
                     <textarea rows="4" placeholder="Deine Wünsche..." required></textarea>
                 </div>
+                
+                <div class="form-checkbox">
+                    <input type="checkbox" id="privacy" required>
+                    <label Lech-id="privacy">Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und Bearbeitung meiner Anfrage gemäß der <a href="#" style="text-decoration: underline; color: inherit;">Datenschutzerklärung</a> verarbeitet werden.</label>
+                </div>
+
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Absenden</button>
                 </div>
@@ -68,6 +74,7 @@
                 <a href="index.html">Startseite</a>
                 <a href="kontakt.html">Kontakt</a>
                 <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
             </div>
             <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2rem;">&copy; 2026 Die Floristin.</p>
         </div>
@@ -80,13 +87,9 @@
             hamburger.classList.toggle('active');
             menuOverlay.classList.toggle('active');
             if(hamburger.classList.contains('active')) {
-                document.querySelector('header').style.mixBlendMode = 'normal';
                 document.querySelector('.logo').style.color = 'var(--clr-bg)';
-                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = 'var(--clr-bg)');
             } else {
-                document.querySelector('header').style.mixBlendMode = 'difference';
-                document.querySelector('.logo').style.color = '#fff';
-                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = '#fff');
+                document.querySelector('.logo').style.color = 'var(--clr-text)';
             }
         });
         const revealElements = document.querySelectorAll('.reveal');
