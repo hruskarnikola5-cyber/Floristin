@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über Uns | Die Floristin</title>
+    <title>Über Us | Die Floristin</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,7 +26,7 @@
         </nav>
     </div>
 
-    <section class="section bg-alt" style="padding-top: 15vh;">
+    <section class="section bg-alt" style="padding-top: 20vh;">
         <div class="container text-center reveal">
             <span class="lead">Die Geschichte</span>
             <h1 class="headline-md">Handwerk mit Herz.</h1>
@@ -41,7 +41,7 @@
                 <p>Seit der Gründung meines kleinen Blumenhandwerks ist die Ape mein treuer Begleiter. In Wolfsburg und Umgebung, besonders in den Steimker Gärten, bin ich für meine Leidenschaft zum Detail bekannt. <br><br>Jeder Zweig, jede Blüte wird von mir persönlich ausgewählt. Ich glaube an nachhaltiges Handwerk und regionale Verbundenheit.</p>
             </div>
             <div class="split-image image-wrapper reveal">
-                <img src="https://images.unsplash.com/photo-1544833058-e70f666f4ea2?auto=format&fit=crop&w=800&q=80" alt="Floristin bei der Arbeit" class="img-hover">
+                <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=800&q=80" alt="Detailreiches Blumenhandwerk und Binden eines Straußes" class="img-hover">
             </div>
         </div>
     </section>
@@ -54,26 +54,22 @@
                 <a href="index.html">Startseite</a>
                 <a href="kontakt.html">Kontakt</a>
                 <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
             </div>
-            <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2rem;">&copy; 2026 Die Floristin.</p>
+            <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 2rem;">© 2026 Die Floristin.</p>
         </div>
     </footer>
 
     <script>
-        /* JS wie oben (Wichtig: In jede Datei kopieren) */
         const hamburger = document.querySelector('.hamburger');
         const menuOverlay = document.querySelector('.menu-overlay');
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             menuOverlay.classList.toggle('active');
             if(hamburger.classList.contains('active')) {
-                document.querySelector('header').style.mixBlendMode = 'normal';
                 document.querySelector('.logo').style.color = 'var(--clr-bg)';
-                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = 'var(--clr-bg)');
             } else {
-                document.querySelector('header').style.mixBlendMode = 'difference';
-                document.querySelector('.logo').style.color = '#fff';
-                document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = '#fff');
+                document.querySelector('.logo').style.color = 'var(--clr-text)';
             }
         });
         const revealElements = document.querySelectorAll('.reveal');
